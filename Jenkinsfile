@@ -28,7 +28,7 @@ pipeline {
             name: kubectl
           command:
           - cat
-        serviceAccount: jenkins
+        serviceAccount: cd-jenkins
         volumes:
         - name: kubectl
           hostPath:
