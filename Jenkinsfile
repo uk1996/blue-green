@@ -24,7 +24,7 @@ pipeline {
           image: sysnet4admin/kustomize:3.6.1
           tty: true
           volumeMounts:
-          - mountPath: /bin/kubectl
+          - mountPath: /usr/bin/kubectl
             name: kubectl
           command:
           - cat
@@ -32,7 +32,7 @@ pipeline {
         volumes:
         - name: kubectl
           hostPath:
-            path: /bin/kubectl
+            path: /usr/bin/kubectl
       '''
     }
   }
